@@ -22,18 +22,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Creamos un model
         let houses = Repository.local.houses
+        let seasons = Repository.local.seasons
         
         // Creamos los controladores
-        let dataSource = DataSource.houseDataSource(model: houses)
-        let delegate = Delegates.houseDelegate(model: houses)
+        let dataSourceHouse = DataSource.houseDataSource(model: houses)
+        let dataSourceSeason = DataSource.seasonDataSource(model: seasons)
         
-        let housesVC = ArrayTableViewController(dataSource: dataSource,
-                                                delegate: delegate,
-                                                title: "Westeros" ,
+        // Creamos los delegados
+        let delegateHouse = Delegates.houseDelegate(model: houses)
+        let delegateSeason = Delegates.seasonDelegate(model: seasons)
+        
+    
+        let housesVC = ArrayTableViewController(dataSource: dataSourceHouse,
+                                                delegate: delegateHouse,
+                                                title: "Houses" ,
                                                 style: .plain).wrappedInNavigation()
         
+        let seasonVC = ArrayTableViewController(dataSource: dataSourceSeason,
+                                                delegate: delegateSeason,
+                                                title: "Seasons" ,
+                                                style: .plain).wrappedInNavigation()
+        
+        let tabBarController = UITabBarController()
+        
+        tabBarController.viewControllers = [housesVC,seasonVC]
+        
         // asignamos el RootVC
-        window?.rootViewController = housesVC
+        window?.rootViewController = tabBarController
         
         return true
     }

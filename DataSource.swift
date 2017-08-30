@@ -44,4 +44,20 @@ final class  DataSource {
         })
     }
     
+    static func seasonDataSource (model: [Season]) -> ArrayDataSource<Season> {
+        return ArrayDataSource(model: model, cellMaker: {(season: Season,tableView: UITableView) -> UITableViewCell in
+            
+            let cellID = "Season"
+            var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
+            
+            if cell == nil {
+                cell = UITableViewCell(style: .default, reuseIdentifier: cellID)
+            }
+            
+            cell?.textLabel?.text = season.title
+            
+            return cell!
+        })
+    }
+    
 }

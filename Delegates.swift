@@ -17,4 +17,11 @@ final class Delegates {
         })
     }
     
+    static func seasonDelegate(model: [Season]) -> ArrayTableViewDelegate<Season> {
+        return ArrayTableViewDelegate(model: model,didSelected: {(house: Season) -> UIViewController in
+            let seasonVC = SeasonViewController(model: house)
+            return seasonVC;
+        })
+    }
+    
 }

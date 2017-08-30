@@ -10,6 +10,9 @@ import UIKit
 
 class SeasonViewController: UIViewController {
     
+    @IBOutlet weak var lbTitle: UILabel!
+    @IBOutlet weak var lbDate: UILabel!
+    
     let model: Season
     
     init(model: Season) {
@@ -23,7 +26,8 @@ class SeasonViewController: UIViewController {
     }
     
     func syncViewWithModel () {
-    
+        lbTitle.text = model.title
+        lbDate.text = model.date.description
     }
 
     override func viewDidLoad() {

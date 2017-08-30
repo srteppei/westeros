@@ -34,10 +34,28 @@ class SeasonTableViewController: UITableViewController {
         return 0
     }
     
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellID = "SeasonCell"
+        // Descubrir cual es la casa que tenemos que mostrar
+        let season = model[indexPath.row]
+        // Crear una celda
+        var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
+        
+        if (cell == nil) {
+            // creamos a pelo
+            cell = UITableViewCell(style: .default, reuseIdentifier: cellID)
+        }
+        
+        // sincronizar House -> Call
+        cell?.textLabel?.text = season.title
+        
+        return cell!
+    }
+    
     // MARK: - Table view delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //let season = model[indexPath.row]
-        //let houseVC = HouseViewController(model: season)
-        //navigationController?.pushViewController(houseVC, animated: true)
+        let season = model[indexPath.row]
+        let houseVC = SeasonViewController(model: season)
+        navigationController?.pushViewController(houseVC, animated: true)
     }
 }

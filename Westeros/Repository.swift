@@ -87,7 +87,7 @@ extension LocalFactory: SeasonFactory {
             var aux = [Season]()
             
             for index in 1...6 {
-                let season: Season = Season(title: "Seasib \(index)", date: Date())
+                let season: Season = Season(title: "Season \(index)", date: Date())
                 
                 season.add(episode: Episode(title: "Episode 1",date: Date()))
                 season.add(episode: Episode(title: "Episode 2",date: Date()))
