@@ -13,9 +13,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        window?.backgroundColor = UIColor.cyan
+        
+        // Creamos un model
+        let houses = Repository.local.houses
+        
+        // Creamos los controladores
+        let dataSource = DataSource.houseDataSource(model: houses)
+        let delegate = Delegates.houseDelegate(model: houses)
+        
+        let housesVC = ArrayTableViewController(dataSource: dataSource,
+                                                delegate: delegate,
+                                                title: "Westeros" ,
+                                                style: .plain).wrappedInNavigation()
+        
+        // asignamos el RootVC
+        window?.rootViewController = housesVC
+        
         return true
     }
 
