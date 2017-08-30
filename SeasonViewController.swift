@@ -29,16 +29,25 @@ class SeasonViewController: UIViewController {
         lbTitle.text = model.title
         lbDate.text = model.date.description
     }
+    
+    func setUpUi () {
+        let episodes = UIBarButtonItem(title: "Episodes",
+                                       style: .plain,
+                                       target: self,
+                                       action: #selector(displayEpisodes))
+        
+        navigationItem.rightBarButtonItem = episodes
+    }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @objc func displayEpisodes () {
+        let episodesVC = EpisodeTableViewController(model: model.sortedEpisodes())
+        navigationController?.pushViewController(episodesVC, animated: true)
     }
   
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        setUpUi()
         syncViewWithModel()
     }
 

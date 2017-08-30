@@ -1,43 +1,43 @@
 //
-//  MembersTableViewController.swift
+//  EpisodeTableViewController.swift
 //  Westeros
 //
-//  Created by yisus on 18/07/2017.
+//  Created by yisus on 30/08/2017.
 //  Copyright © 2017 yisus. All rights reserved.
 //
 
 import UIKit
 
-class MembersTableViewController: UITableViewController {
-        
-    let model: [Person]
+class EpisodeTableViewController: UITableViewController {
     
-    init (model: [Person]) {
+    let model: [Episode]
+    
+    init(model: [Episode]) {
         self.model = model
         super.init(nibName: nil, bundle: nil)
-        title = "Members"
+        title = "Episode"
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     // MARK: - Table view data source
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return model.count
     }
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellID = "MemberCell"
+        let cellID = "Episode"
         // Descubrir cual es la casa que tenemos que mostrar
-        let person = model[indexPath.row]
+        let episode = model[indexPath.row]
         // Crear una celda
         var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
         
@@ -46,8 +46,10 @@ class MembersTableViewController: UITableViewController {
             cell = UITableViewCell(style: .default, reuseIdentifier: cellID)
         }
         // sincronizar House -> Call
-        cell?.textLabel?.text = person.fullName
+        cell?.textLabel?.text = episode.title
         
         return cell!
     }
+
+
 }

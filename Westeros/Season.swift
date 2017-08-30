@@ -35,6 +35,11 @@ final class Season {
             add(episode: episode)
         }
     }
+    
+    // Sorted (Person)
+    func sortedEpisodes () -> [Episode] {
+        return Array(_episodes).sorted()
+    }
 
 }
 

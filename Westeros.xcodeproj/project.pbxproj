@@ -19,6 +19,7 @@
 		7A14A46A1F0EC8E700537F27 /* lannister.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A14A4681F0EC8E700537F27 /* lannister.jpg */; };
 		7A14A46C1F0ECAAE00537F27 /* PersonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A14A46B1F0ECAAE00537F27 /* PersonTest.swift */; };
 		7A14A46E1F0ECD8B00537F27 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A14A46D1F0ECD8B00537F27 /* Person.swift */; };
+		7A1B4FCD1F57629A001FC7CD /* EpisodeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B4FCC1F57629A001FC7CD /* EpisodeTableViewController.swift */; };
 		7A4C82931F56C67D0054ACF5 /* SeasonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C82911F56C67D0054ACF5 /* SeasonTableViewController.swift */; };
 		7A4C82941F56C67D0054ACF5 /* SeasonTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A4C82921F56C67D0054ACF5 /* SeasonTableViewController.xib */; };
 		7A4C82971F56CC720054ACF5 /* SeasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C82951F56CC720054ACF5 /* SeasonViewController.swift */; };
@@ -66,6 +67,7 @@
 		7A14A4681F0EC8E700537F27 /* lannister.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lannister.jpg; sourceTree = "<group>"; };
 		7A14A46B1F0ECAAE00537F27 /* PersonTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTest.swift; sourceTree = "<group>"; };
 		7A14A46D1F0ECD8B00537F27 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		7A1B4FCC1F57629A001FC7CD /* EpisodeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewController.swift; sourceTree = "<group>"; };
 		7A4C82911F56C67D0054ACF5 /* SeasonTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonTableViewController.swift; sourceTree = "<group>"; };
 		7A4C82921F56C67D0054ACF5 /* SeasonTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SeasonTableViewController.xib; sourceTree = "<group>"; };
 		7A4C82951F56CC720054ACF5 /* SeasonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				7A4C82921F56C67D0054ACF5 /* SeasonTableViewController.xib */,
 				7A4C82951F56CC720054ACF5 /* SeasonViewController.swift */,
 				7A4C82961F56CC720054ACF5 /* SeasonViewController.xib */,
+				7A1B4FCC1F57629A001FC7CD /* EpisodeTableViewController.swift */,
 			);
 			name = Controllers;
 			path = ..;
@@ -362,6 +365,7 @@
 				7A4C82931F56C67D0054ACF5 /* SeasonTableViewController.swift in Sources */,
 				7AFEC49A1F1EAB830097942C /* DataSource.swift in Sources */,
 				7ADABC5D1F1E862D00CCA56B /* MembersTableViewController.swift in Sources */,
+				7A1B4FCD1F57629A001FC7CD /* EpisodeTableViewController.swift in Sources */,
 				7AF34D721F155DB30081D932 /* UIKitExtensions.swift in Sources */,
 				7A66D6741F14129100DCFE90 /* HouseViewController.swift in Sources */,
 				7AF34D761F1562110081D932 /* Repository.swift in Sources */,
